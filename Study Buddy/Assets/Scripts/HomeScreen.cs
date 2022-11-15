@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class HomeScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+ public void playGame()
+ {
+    SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ }
+
+ public void GoToSettingsMenu()
+ {
+    SceneManager.LoadScene("SettingsMenu");
+ }
+
+public void GoToMainMenu()
+ {
+    SceneManager.LoadScene("MainMenu");
+ }
+
+ public void Back()
+ {
+    Application.Quit();
+ }
+
 }
