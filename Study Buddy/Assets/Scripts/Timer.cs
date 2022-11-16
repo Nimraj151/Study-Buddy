@@ -2,30 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class Timer : MonoBehaviour
 {
     public float timeLeft = 30;
     public bool runningTimer = false;
     public Text timeText;
+
     private void Start()
     {
 
-         runningTimer   = true;
+         runningTimer = true;
     }
     void Update()
     {
         if (runningTimer)
         {
-            if ( timeLeft   > 0)
+            if (timeLeft > 0)
             {
-                 timeLeft   -= Time.deltaTime;
-                DisplayTime( timeLeft  );
+                timeLeft -= Time.deltaTime;
+                DisplayTime(timeLeft);
             }
             else
             {
                 Debug.Log("Your time is out!!!");
-                 timeLeft = 0;
-                 runningTimer = false;
+                timeLeft = 0;
+                runningTimer = false;
             }
         }
     }
