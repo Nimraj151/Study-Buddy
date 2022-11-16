@@ -1,26 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HomeScreen : MonoBehaviour
 {
- public void playGame()
+   public GameObject todoList;
+   public GameObject timer; 
+   public GameObject homeScreen; 
+
+
+
+ public void GotodoList()
  {
-    SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+      homeScreen.gameObject.SetActive(false);
+      todoList.gameObject.SetActive(true);
+ }
+
+ public void GoToTimer()
+ {
+      homeScreen.gameObject.SetActive(false);
+      timer.gameObject.SetActive(true);
 
  }
 
- public void GoToSettingsMenu()
- {
-    SceneManager.LoadScene("SettingsMenu");
- }
 
-public void GoToMainMenu()
- {
-    SceneManager.LoadScene("MainMenu");
- }
-
- public void Back()
+ public void Quit()
  {
     Application.Quit();
  }

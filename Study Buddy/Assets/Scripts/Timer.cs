@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public float timeLeft = 30;
-    public bool RunningTimer = false;
+    public bool runningTimer = false;
     public Text timeText;
     private void Start()
     {
@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
             {
                 Debug.Log("Your time is out!!!");
                  timeLeft = 0;
-                 RunningTimer = false;
+                 runningTimer = false;
             }
         }
     }
